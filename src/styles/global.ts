@@ -1,30 +1,40 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, css } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  ${({ theme }) => css`
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    font-size: 1.6rem;
-    font-family: ${({ theme }) => theme.fonts.family};
-  }
+    body {
+      font-size: 1.6rem;
+      font-family: ${theme.fonts.family};
+      background-color: ${theme.colors.background};
+      color: #fff;
+    }
 
-  html {
-    font-size: 62.5%;
-  }
+    html {
+      font-size: 62.5%;
+    }
 
-  a {
-    text-decoration: none;
-  }
+    a {
+      text-decoration: none;
+    }
 
-  ul {
-    list-style: none;
-  }
+    ul {
+      list-style: none;
+    }
 
-  img {
-    display: block;
-  }
+    img {
+      display: block;
+    }
+  `}
+`
+
+export const Container = styled.div`
+  max-width: 110rem;
+  width: 100%;
+  margin: 0 auto;
 `
