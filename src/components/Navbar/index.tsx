@@ -27,11 +27,11 @@ export function Navbar() {
     <S.Header isScroll={scroll}>
       <Container>
         <S.Wrapper>
-          <S.Logo isScroll={scroll}>
-            <S.IconHome isScroll={scroll} />
+          <S.Logo>
+            <S.IconHome />
             <h1>homeyou</h1>
           </S.Logo>
-          <S.Nav isScroll={scroll}>
+          <S.Nav>
             <S.List>
               <S.Item>
                 <S.Link href="">Inicio</S.Link>

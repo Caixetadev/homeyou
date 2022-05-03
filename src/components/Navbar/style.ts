@@ -7,21 +7,30 @@ type Prop = {
 }
 
 export const Header = styled.header<Prop>`
-  display: flex;
-  align-items: center;
+  ${({ theme, isScroll }) => css`
+    display: flex;
+    align-items: center;
 
-  position: fixed;
-  top: 0;
-  right: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
 
-  z-index: 10;
+    z-index: 10;
 
-  height: ${({ isScroll, theme }) => (isScroll ? '6.8rem' : '9rem')};
-  width: 100%;
-  background-color: ${({ isScroll, theme }) =>
-    isScroll ? theme.colors.background_terciary : theme.colors.background};
+    height: ${isScroll ? '6.8rem' : '9rem'};
+    width: 100%;
+    background-color: ${isScroll
+      ? theme.colors.background_terciary
+      : theme.colors.background};
 
-  transition: all 0.3s ease-out;
+    h1,
+    a,
+    ul li svg {
+      color: ${isScroll ? theme.colors.text : theme.colors.text_dark}!important;
+    }
+
+    transition: all 0.3s ease-out;
+  `}
 `
 
 export const Wrapper = styled.div`
@@ -30,14 +39,14 @@ export const Wrapper = styled.div`
   justify-content: space-between;
 `
 
-export const Logo = styled.div<Prop>`
-  ${({ theme, isScroll }) => css`
+export const Logo = styled.div`
+  ${({ theme }) => css`
     display: flex;
     align-items: center;
 
     h1 {
       text-transform: uppercase;
-      color: ${isScroll ? theme.colors.text : theme.colors.text_dark};
+      color: ${theme.colors.text_dark};
       font-size: ${theme.fonts.medium};
       margin-left: 1.5rem;
       font-weight: 600;
@@ -45,26 +54,24 @@ export const Logo = styled.div<Prop>`
   `}
 `
 
-export const IconHome = styled(AiOutlineHome)<Prop>`
-  ${({ theme, isScroll }) => css`
+export const IconHome = styled(AiOutlineHome)`
+  ${({ theme }) => css`
     font-size: 4rem;
     padding: 0.5rem;
-    background-color: ${isScroll
-      ? theme.colors.background
-      : theme.colors.background_terciary};
-    color: ${isScroll ? theme.colors.text_dark : theme.colors.text};
+    background-color: ${theme.colors.background_terciary};
+    color: ${theme.colors.text};
     transition: all 0.3 ease;
   `}
 `
 
-export const Nav = styled.nav<Prop>`
-  ${({ theme, isScroll }) => css`
+export const Nav = styled.nav`
+  ${({ theme }) => css`
     display: flex;
 
     a,
     svg {
       transition: all 0.3s ease;
-      color: ${isScroll ? theme.colors.text : theme.colors.text_dark}!important;
+      color: ${theme.colors.text_dark};
     }
   `}
 `
