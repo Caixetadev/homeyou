@@ -11,7 +11,7 @@ export const Header = styled.header<Prop>`
     display: flex;
     align-items: center;
 
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
 
@@ -94,19 +94,19 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   & + li {
-    margin-left: 4rem;
+    margin-left: 4.8rem;
   }
 `
 
 export const Link = styled.a`
   ${({ theme }) => css`
     color: ${theme.colors.text_dark};
-    font-size: ${theme.fonts.small};
+    font-size: ${theme.fonts.smallX};
     font-weight: 500;
 
     svg {
       color: ${theme.colors.text_dark};
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
   `}
 `

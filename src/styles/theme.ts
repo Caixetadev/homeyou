@@ -13,6 +13,7 @@ const theme = {
     large_secundary: '3.2rem',
     large_terceary: '2.8rem',
     medium: '2.4rem',
+    smallX: '1.8rem',
     small: '1.6rem'
   }
 }
