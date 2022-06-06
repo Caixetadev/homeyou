@@ -17,7 +17,7 @@ export const Header = styled.header<Prop>`
 
     z-index: 10;
 
-    height: ${isScroll ? '6.8rem' : '9rem'};
+    height: ${isScroll ? '6.8rem' : '8rem'};
     width: 100%;
     background-color: ${isScroll
       ? theme.colors.background_terciary

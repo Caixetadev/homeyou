@@ -11,17 +11,17 @@ export function Navbar() {
   const [scroll, setScroll] = useState(false)
 
   useEffect(() => {
-    const scroll = () => {
+    const scrollF = () => {
       if (window.scrollY > 20) {
         setScroll(true)
-      } else {
+      } else if (window.scrollY < 10) {
         setScroll(false)
       }
     }
 
-    window.addEventListener('scroll', scroll)
+    window.addEventListener('scroll', scrollF)
 
-    return () => window.removeEventListener('scroll', scroll)
+    return () => window.removeEventListener('scroll', scrollF)
   }, [])
 
   return (
