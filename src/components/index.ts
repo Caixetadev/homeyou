@@ -1,2 +1,6 @@
 export * from './Navbar'
 export * from './Hero'
+export * from './About'
+export * from './Gallery'
+export * from './Pudget'
+export * from './Title'

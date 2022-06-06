@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
 import styled from 'styled-components'
 
-import { Navbar, Hero } from '../components'
-import { About } from '../components/About'
-import { Gallery } from '../components/Gallery'
+import { Navbar, Hero, About, Gallery, Pudget } from '../components'
 
 const Seila = styled.div`
   margin-top: 400rem;
@@ -16,6 +14,7 @@ const Home: NextPage = () => {
       <Hero />
       <About />
       <Gallery />
+      <Pudget />
       <Seila />
     </>
   )

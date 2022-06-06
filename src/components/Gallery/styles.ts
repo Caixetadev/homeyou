@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
   margin-top: 13.7rem;
-  height: 100vh;
 `
 
 export const Wrapper = styled.div`
