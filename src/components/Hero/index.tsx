@@ -1,6 +1,4 @@
-import Image from 'next/image'
-
-import HouseImage from '/public/images/hero.svg'
+import HouseImage from '/public/images/home.png'
 
 import { Container } from '../../styles/global'
 import * as S from './style'

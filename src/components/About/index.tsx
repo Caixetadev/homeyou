@@ -1,4 +1,4 @@
-import Couch from '/public/images/couch.svg'
+import Couch from '/public/images/couch.png'
 
 import { Container } from '../../styles/global'
 import * as S from './styles'
