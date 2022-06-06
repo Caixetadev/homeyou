@@ -5,6 +5,7 @@ import { BiSearch } from 'react-icons/bi'
 
 import { Container } from '../../styles/global'
 import * as S from './style'
+import { Logo } from '../Logo'
 
 export function Navbar() {
   const [scroll, setScroll] = useState(false)
@@ -28,7 +29,7 @@ export function Navbar() {
       <Container>
         <S.Wrapper>
           <S.Logo>
-            <S.IconHome />
+            <Logo />
             <h1>homeyou</h1>
           </S.Logo>
           <S.Nav>
