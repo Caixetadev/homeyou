@@ -11,5 +11,11 @@ export const Button = styled.button`
     font-weight: 500;
     cursor: pointer;
     color: #fff;
+
+    @media (max-width: 560px) {
+      width: 14.7rem;
+      height: 3.1rem;
+      font-size: 1.2rem;
+    }
   `}
 `

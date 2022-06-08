@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
-  margin-top: 12.9rem;
+  margin-top: 8rem;
 `
 
 export const Title = styled.h2`
@@ -9,6 +9,10 @@ export const Title = styled.h2`
     font-weight: 600;
     margin-bottom: 2rem;
     font-size: ${theme.fonts.large_terceary};
+
+    @media (max-width: 560px) {
+      font-size: ${theme.fonts.medium};
+    }
   `}
 `
 
@@ -27,7 +31,15 @@ export const Button = styled.button`
     margin-top: 2.4rem;
     border: none;
     display: flex;
-    background-color: none;
+    background-color: transparent;
+
+    @media (max-width: 560px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      margin-top: 1.6rem;
+    }
   `}
 `
 
@@ -36,6 +48,11 @@ export const Description = styled.p`
     font-weight: 500;
     font-size: ${theme.fonts.small};
     line-height: 2.56rem;
+
+    @media (max-width: 560px) {
+      font-size: 1.4rem;
+      line-height: 1.96rem;
+    }
   `}
 `
 
@@ -45,6 +62,12 @@ export const Box = styled.div`
     height: 18.2rem;
     background-color: ${theme.colors.background_terciary};
     padding: 3rem;
+
+    @media (max-width: 560px) {
+      width: 31.2rem;
+      height: 17.7rem;
+      padding: 1.6rem;
+    }
   `}
 `
 
@@ -52,6 +75,12 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 560px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 export const WrapperImage = styled.div`
@@ -69,6 +98,10 @@ export const WrapperImage = styled.div`
       height: 45.7rem;
       z-index: -1;
       background-color: ${theme.colors.background_terciary};
+    }
+
+    @media (max-width: 560px) {
+      display: none;
     }
   `}
 `

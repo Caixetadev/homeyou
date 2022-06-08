@@ -50,17 +50,11 @@ export const Logo = styled.div`
       font-size: ${theme.fonts.medium};
       margin-left: 1.5rem;
       font-weight: 600;
-    }
-  `}
-`
 
-export const IconHome = styled(AiOutlineHome)`
-  ${({ theme }) => css`
-    font-size: 4rem;
-    padding: 0.5rem;
-    background-color: ${theme.colors.background_terciary};
-    color: ${theme.colors.text};
-    transition: all 0.3 ease;
+      @media (max-width: 520px) {
+        font-size: ${theme.fonts.small};
+      }
+    }
   `}
 `
 
@@ -73,7 +67,19 @@ export const Nav = styled.nav`
       transition: all 0.3s ease;
       color: ${theme.colors.text_dark};
     }
+
+    @media (max-width: 900px) {
+      display: none;
+    }
   `}
+`
+
+export const MenuHamb = styled.img`
+  display: none;
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
 `
 
 export const Icons = styled.ul`

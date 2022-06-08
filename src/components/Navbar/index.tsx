@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react'
 import { HiOutlineUser } from 'react-icons/hi'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { BiSearch } from 'react-icons/bi'
+import IconMenu from '/public/images/iconMenu.svg'
 
 import { Container } from '../../styles/global'
 import * as S from './style'
 import { Logo } from '../Logo'
+import Image from 'next/image'
 
 export function Navbar() {
   const [scroll, setScroll] = useState(false)
@@ -63,6 +65,7 @@ export function Navbar() {
               </S.Icon>
             </S.Icons>
           </S.Nav>
+          <S.MenuHamb src={IconMenu.src} alt="menu hamburguer" />
         </S.Wrapper>
       </Container>
     </S.Header>

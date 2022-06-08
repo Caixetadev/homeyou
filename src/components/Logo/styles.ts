@@ -9,5 +9,9 @@ export const IconHome = styled(AiOutlineHome)`
     background-color: ${theme.colors.background_terciary};
     color: ${theme.colors.text};
     transition: all 0.3 ease;
+
+    @media (max-width: 520px) {
+      font-size: ${theme.fonts.medium}!important;
+    }
   `}
 `
